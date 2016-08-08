@@ -26,11 +26,11 @@ do
      sh -c 'echo 0 > /sys/class/gpio/gpio410/value'
      sh -c 'echo 1 > /sys/class/gpio/gpio411/value'
   fi
-
-  sh -c 'echo 0 > /sys/class/gpio/gpio408/value'
-  sh -c 'echo 0 > /sys/class/gpio/gpio409/value'
-  sh -c 'echo 0 > /sys/class/gpio/gpio410/value'
-  sh -c 'echo 0 > /sys/class/gpio/gpio411/value'
-
+  if [ $c == ' ' ]; then
+    sh -c 'echo 0 > /sys/class/gpio/gpio408/value'
+    sh -c 'echo 0 > /sys/class/gpio/gpio409/value'
+    sh -c 'echo 0 > /sys/class/gpio/gpio410/value'
+    sh -c 'echo 0 > /sys/class/gpio/gpio411/value'
+  fi
 done
 
